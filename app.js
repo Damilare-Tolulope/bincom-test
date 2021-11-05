@@ -5,7 +5,7 @@ const ejs = require('ejs');
 const app = express()
 
 // Use express middleware
-app.use(express.json())
+app.use(express.json());
 
 // Set templating engine
 app.set('view engine', 'html');

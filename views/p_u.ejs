@@ -7,7 +7,16 @@
     <title>Polling units</title>
 </head>
 <body>
-    <p>Result for <%= results[0].party_abbreviation %> Polling Unit</p>
+    <p>Result for Polling Unit with unique ID <%= results[0].polling_unit_uniqueid %></p>
+
+    <table>
+        <% results.forEach( result => { %>
+            <tr>
+                <td><strong><%= result.party_abbreviation %></strong></td>
+                <td><%= result.party_score %></td>
+            </tr>
+        <%}) %>
+    </table>
     
 </body>
 </html>
