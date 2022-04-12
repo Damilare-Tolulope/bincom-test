@@ -18,16 +18,6 @@ app.get('/', function(req, res) {
     res.render('index')
 })
 
-// <% mascots.forEach(function(mascot) { %>
-//     <li>
-//       <strong><%= mascot.name %></strong>
-//       representing <%= mascot.organization %>,
-//       born <%= mascot.birth_year %>
-//     </li>
-//   <% }); %>
-
-// <%= tagline %>
-
 
 // Connect to mysql
 const db = mysql.createConnection({
@@ -43,6 +33,15 @@ const db = mysql.createConnection({
       console.log("Connected to database")
   })
 
+// Create DB
+// app.get('/createDB', (req, res) => {
+//     let sql = 'CREAT DATABASE bincom_exercise';
+//     db.query(sql, (err, result) => {
+//         if(err) throw err;
+//         console.log(result);
+//         res.send('Database created');
+//     })
+// })
 
 // Question 1 Route
 app.get('/getdata', (req, res) => {
